@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CadsusDemo
 {
-    public partial class FrmPesquisar : Form
+    public partial class FrmPesquisarPorNomeDaMae : Form
     {
-        public FrmPesquisar()
+        public FrmPesquisarPorNomeDaMae()
         {
             InitializeComponent();
 

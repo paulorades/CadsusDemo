@@ -1,6 +1,6 @@
 ﻿namespace CadsusDemo
 {
-    partial class FrmPesquisar
+    partial class FrmPesquisarPorNomeDaMae
     {
         /// <summary>
         /// Variável de designer necessária.
