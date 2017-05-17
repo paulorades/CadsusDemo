@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B3ACD23-AE52-4BF8-B49A-4E14E6834E10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CadsusDemo</RootNamespace>
+    <AssemblyName>CadsusDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\CadsusService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisar.Designer.cs">
+      <DependentUpon>FrmPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmPesquisar.resx">
+      <DependentUpon>FrmPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseAlterarSituacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseAlterarSituacao1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseAtualizar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseAtualizar1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseCalcularGrauDeQualidade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseCalcularGrauDeQualidade1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseConsultar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseConsultar1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseIncluir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseIncluir1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responsePesquisar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.ResultadoPesquisa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CadsusService\CadsusService.wsdl" />
+    <None Include="Connected Services\CadsusService\v5r0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r010.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r011.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r012.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r013.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r014.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r015.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r016.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r017.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r018.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r019.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r020.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r021.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r022.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r023.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r024.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r025.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r026.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r027.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r028.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r029.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r030.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r031.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r032.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r033.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r034.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r035.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r036.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r037.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r038.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r039.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r040.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r041.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r042.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r043.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r044.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r045.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r046.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r047.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r048.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r06.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r08.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CadsusService\v5r09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CadsusService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CadsusService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CadsusService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CadsusService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
