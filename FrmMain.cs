@@ -14,5 +14,10 @@ namespace CadsusDemo
         {
             new FrmPesquisarPorNomeDaMae().Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new FrmPesquisaPorCPF().Show();
+        }
     }
 }
