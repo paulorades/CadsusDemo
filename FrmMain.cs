@@ -15,7 +15,7 @@ namespace CadsusDemo
             new FrmPesquisarPorNomeDaMae().Show();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void pesquisarPorCPFtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmPesquisaPorCPF().Show();
         }
@@ -23,6 +23,11 @@ namespace CadsusDemo
         private void pesquisarPorNomeCompletoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmPesquisarPorNomeCompleto().Show();
+        }
+
+        private void verificarAtaualizaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmConsultarUsuario().Show();
         }
     }
 }

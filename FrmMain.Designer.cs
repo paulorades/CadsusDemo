@@ -31,8 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pesquisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porNomeDaMaeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarPorCPFtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarPorNomeCompletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verificarAtaualizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,8 +51,9 @@
             // 
             this.pesquisarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porNomeDaMaeToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.pesquisarPorNomeCompletoToolStripMenuItem});
+            this.pesquisarPorCPFtoolStripMenuItem,
+            this.pesquisarPorNomeCompletoToolStripMenuItem,
+            this.verificarAtaualizaçãoToolStripMenuItem});
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
@@ -63,12 +65,12 @@
             this.porNomeDaMaeToolStripMenuItem.Text = "Por nome da mãe";
             this.porNomeDaMaeToolStripMenuItem.Click += new System.EventHandler(this.porNomeDaMaeToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // pesquisarPorCPFtoolStripMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(233, 22);
-            this.toolStripMenuItem1.Text = "Pesquisa por CPF";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.pesquisarPorCPFtoolStripMenuItem.Name = "pesquisarPorCPFtoolStripMenuItem";
+            this.pesquisarPorCPFtoolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.pesquisarPorCPFtoolStripMenuItem.Text = "Pesquisa por CPF";
+            this.pesquisarPorCPFtoolStripMenuItem.Click += new System.EventHandler(this.pesquisarPorCPFtoolStripMenuItem_Click);
             // 
             // pesquisarPorNomeCompletoToolStripMenuItem
             // 
@@ -76,6 +78,13 @@
             this.pesquisarPorNomeCompletoToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.pesquisarPorNomeCompletoToolStripMenuItem.Text = "Pesquisar por nome completo";
             this.pesquisarPorNomeCompletoToolStripMenuItem.Click += new System.EventHandler(this.pesquisarPorNomeCompletoToolStripMenuItem_Click);
+            // 
+            // verificarAtaualizaçãoToolStripMenuItem
+            // 
+            this.verificarAtaualizaçãoToolStripMenuItem.Name = "verificarAtaualizaçãoToolStripMenuItem";
+            this.verificarAtaualizaçãoToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.verificarAtaualizaçãoToolStripMenuItem.Text = "Consultar usuário";
+            this.verificarAtaualizaçãoToolStripMenuItem.Click += new System.EventHandler(this.verificarAtaualizaçãoToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -98,7 +107,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porNomeDaMaeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarPorCPFtoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarPorNomeCompletoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verificarAtaualizaçãoToolStripMenuItem;
     }
 }
