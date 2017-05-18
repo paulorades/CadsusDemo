@@ -187,10 +187,21 @@ namespace CadsusDemo
                     }
                 }
             }
+            catch (System.ServiceModel.FaultException<CadsusService.MSFalha> ex)
+            {
+                var strb = new StringBuilder();
+                strb.AppendLine("Erro na consulta:\n");
+
+                foreach (var err in ex.Detail.Mensagem)
+                    strb.AppendLine($"Cód: {err.codigo} - Descrição: {err.descricao}");
+
+                MessageBox.Show(strb.ToString());
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show($"ERRO: {ex.ToString()}");
             }
+
         }
     }
 }
