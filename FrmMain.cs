@@ -19,5 +19,10 @@ namespace CadsusDemo
         {
             new FrmPesquisaPorCPF().Show();
         }
+
+        private void pesquisarPorNomeCompletoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmPesquisarPorNomeCompleto().Show();
+        }
     }
 }

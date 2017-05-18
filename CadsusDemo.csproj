@@ -65,6 +65,12 @@
     <Compile Include="FrmPesquisaPorCPF.Designer.cs">
       <DependentUpon>FrmPesquisaPorCPF.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPesquisarPorNomeCompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisarPorNomeCompleto.Designer.cs">
+      <DependentUpon>FrmPesquisarPorNomeCompleto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPesquisarPorNomeDaMae.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPesquisaPorCPF.resx">
       <DependentUpon>FrmPesquisaPorCPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesquisarPorNomeCompleto.resx">
+      <DependentUpon>FrmPesquisarPorNomeCompleto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPesquisarPorNomeDaMae.resx">
       <DependentUpon>FrmPesquisarPorNomeDaMae.cs</DependentUpon>

@@ -55,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nome da mãe:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txbNomeMae
             // 
@@ -63,6 +64,7 @@
             this.txbNomeMae.Size = new System.Drawing.Size(435, 20);
             this.txbNomeMae.TabIndex = 4;
             this.txbNomeMae.Text = "LINDYNALVA SOARES ARAUJO CORREIA LIMA";
+            this.txbNomeMae.TextChanged += new System.EventHandler(this.txbNomeMae_TextChanged);
             // 
             // label2
             // 
@@ -72,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(111, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Precisão da pesquisa:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cbbPrecisaoPesquisa
             // 
@@ -80,6 +83,7 @@
             this.cbbPrecisaoPesquisa.Name = "cbbPrecisaoPesquisa";
             this.cbbPrecisaoPesquisa.Size = new System.Drawing.Size(400, 21);
             this.cbbPrecisaoPesquisa.TabIndex = 6;
+            this.cbbPrecisaoPesquisa.SelectedIndexChanged += new System.EventHandler(this.cbbPrecisaoPesquisa_SelectedIndexChanged);
             // 
             // dtgResultado
             // 
@@ -92,8 +96,9 @@
             this.dtgResultado.ReadOnly = true;
             this.dtgResultado.Size = new System.Drawing.Size(514, 213);
             this.dtgResultado.TabIndex = 8;
+            this.dtgResultado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResultado_CellContentClick);
             // 
-            // FrmPesquisar
+            // FrmPesquisarPorNomeDaMae
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +109,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbNomeMae);
             this.Controls.Add(this.btnPesquisar);
-            this.Name = "FrmPesquisar";
+            this.Name = "FrmPesquisarPorNomeDaMae";
             this.Text = "Pesquisa por nome da mãe";
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultado)).EndInit();
             this.ResumeLayout(false);

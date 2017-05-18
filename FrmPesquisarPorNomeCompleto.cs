@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CadsusDemo
 {
-    public partial class FrmPesquisarPorNomeDaMae : Form
+    public partial class FrmPesquisarPorNomeCompleto : Form
     {
-        public FrmPesquisarPorNomeDaMae()
+        public FrmPesquisarPorNomeCompleto()
         {
             InitializeComponent();
 
@@ -38,8 +45,8 @@ namespace CadsusDemo
                     requestPesquisa.CNESUsuario.Senha = ConfigurationManager.AppSettings["CNESUsuario.Senha"].ToString();
 
                     requestPesquisa.FiltroPesquisa = new CadsusService.FiltroPesquisa();
-                    requestPesquisa.FiltroPesquisa.Mae = new CadsusService.NomeCompletoType();
-                    requestPesquisa.FiltroPesquisa.Mae.Nome = txbNomeMae.Text;
+                    requestPesquisa.FiltroPesquisa.nomeCompleto = new CadsusService.NomeCompletoType();
+                    requestPesquisa.FiltroPesquisa.nomeCompleto.Nome = txbNomeCompleto.Text;
                     requestPesquisa.FiltroPesquisa.tipoPesquisa = (CadsusService.TipoPesquisaType)cbbPrecisaoPesquisa.SelectedValue;
 
                     CadsusService.responsePesquisar x = await servico.pesquisarAsync(requestPesquisa);
@@ -60,31 +67,6 @@ namespace CadsusDemo
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbbPrecisaoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbNomeMae_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgResultado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
