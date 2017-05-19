@@ -29,5 +29,10 @@ namespace CadsusDemo
         {
             new FrmConsultarUsuario().Show();
         }
+
+        private void incluirNovoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmIncluirUsuario().Show();
+        }
     }
 }

@@ -34,13 +34,16 @@
             this.pesquisarPorCPFtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarPorNomeCompletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verificarAtaualizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirNovoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pesquisarToolStripMenuItem});
+            this.pesquisarToolStripMenuItem,
+            this.incluirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(864, 24);
@@ -86,6 +89,21 @@
             this.verificarAtaualizaçãoToolStripMenuItem.Text = "Consultar usuário";
             this.verificarAtaualizaçãoToolStripMenuItem.Click += new System.EventHandler(this.verificarAtaualizaçãoToolStripMenuItem_Click);
             // 
+            // incluirToolStripMenuItem
+            // 
+            this.incluirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirNovoUsuarioToolStripMenuItem});
+            this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
+            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.incluirToolStripMenuItem.Text = "Incluir";
+            // 
+            // incluirNovoUsuarioToolStripMenuItem
+            // 
+            this.incluirNovoUsuarioToolStripMenuItem.Name = "incluirNovoUsuarioToolStripMenuItem";
+            this.incluirNovoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.incluirNovoUsuarioToolStripMenuItem.Text = "Incluir novo usuário";
+            this.incluirNovoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.incluirNovoUsuarioToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,5 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem pesquisarPorCPFtoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarPorNomeCompletoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verificarAtaualizaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirNovoUsuarioToolStripMenuItem;
     }
 }

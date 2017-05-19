@@ -59,6 +59,12 @@
     <Compile Include="FrmConsultarUsuario.Designer.cs">
       <DependentUpon>FrmConsultarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIncluirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncluirUsuario.Designer.cs">
+      <DependentUpon>FrmIncluirUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConsultarUsuario.resx">
       <DependentUpon>FrmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncluirUsuario.resx">
+      <DependentUpon>FrmIncluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

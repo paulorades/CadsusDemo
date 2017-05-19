@@ -73,6 +73,12 @@ namespace CadsusDemo
                                     user.Mae.Nome
                                 });
 
+                            dtgResultado.Rows.Add(new object[]
+                            {
+                                "CNS",
+                                 x.responsePesquisar1[0].CNS.numeroCNS
+                            });
+
                             if (user.Pai != null)
                                 dtgResultado.Rows.Add(new object[]
                                 {
