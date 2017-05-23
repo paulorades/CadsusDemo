@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/tipotransacao" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/tipotransacao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa um tipo transação.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="TipoTransacao" type="TipoTransacaoType" />
+  <xs:simpleType name="TipoTransacaoType">
+    <xs:annotation>
+      <xs:documentation><![CDATA[Tipo de Transação - ADICIONADO, ATIVO, DESATIVO,
+			 	UNIDO, DESUNIDO, ATUALIZADO.]]></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ADICIONADO" />
+      <xs:enumeration value="ATIVO" />
+      <xs:enumeration value="DESATIVO" />
+      <xs:enumeration value="UNIDO" />
+      <xs:enumeration value="DESUNIDO" />
+      <xs:enumeration value="ATUALIZADO" />
+      <xs:enumeration value="MANUTENCAO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

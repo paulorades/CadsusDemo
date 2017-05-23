@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" xmlns:tiposanguineo="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/tiposanguineo" xmlns:identificadorcorporativo="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" xmlns:certidoes="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidoes" xmlns:documentos="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" xmlns:municipio="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" xmlns:telefone="http://servicos.saude.gov.br/schema/corporativo/telefone/v1r2/telefone" xmlns:etnia="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/etniaindigena" xmlns:nomecompleto="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" xmlns:cpf="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" xmlns:nomesocial="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" xmlns:sexo="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" xmlns:cns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:emails="http://servicos.saude.gov.br/schema/corporativo/v5r0/emails" xmlns:qualidade="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" xmlns:identificadorlocal="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" xmlns:foto="http://servicos.saude.gov.br/schema/corporativo/v1r1/fotografia" xmlns:endereco="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r2/endereco" xmlns:racacor="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/racacor" xmlns:dadosnacionalidade="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/dadosnacionalidade" xmlns:precadastro="http://servicos.saude.gov.br/schema/cadsus/v1r1/dadosprecadastro" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A93ab8586-c32d-4c9d-a94d-c4a9622df209" id="cpf" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/cpf" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A844da212-7976-4dc0-9add-a5d04b574797" id="cns" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A0403b4b6-87ab-4def-aea4-369e5feb2671" id="identificadorlocal" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorlocal" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab408b421-17c5-444f-abeb-44a53dd257cd" id="identificadorcorporativo" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A47331d39-66f7-4ece-aa56-57de80459dfa" id="nomecompleto" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/nomecompleto" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A0a90d39b-8bf0-4752-9b59-7918ef29b590" id="nomesocial" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/nomesocial" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A831dfdba-288e-462f-be1a-a2f555ce8e29" id="documentos" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A8e37c0e1-0d73-429d-b546-fe4065a21792" id="certidoes" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/certidao/v1r1/certidoes" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A737621af-307d-4848-966c-6a8fdc1543de" id="endereco" namespace="http://servicos.saude.gov.br/schema/corporativo/endereco/v1r2/endereco" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab30b5427-5cd0-4d7d-abe3-2077258ffe53" id="racacor" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/racacor" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Abf58257b-bf08-4a34-8476-60849793328c" id="etnia" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r2/etniaindigena" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A08ee4383-f53e-4c61-8046-466c978515b5" id="municipio" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r2/municipio" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A31ed9740-b4d4-41be-be3b-2f1f0dc0b00a" id="telefone" namespace="http://servicos.saude.gov.br/schema/corporativo/telefone/v1r2/telefone" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A3a0b3368-ed58-4d5d-b165-a2d17ee6a42b" id="emails" namespace="http://servicos.saude.gov.br/schema/corporativo/v5r0/emails" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A029ad9cf-156e-408a-b4ae-7dbbf999d904" id="sexo" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/sexo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab876be3e-54ad-429d-8478-5be9121be409" id="precadastro" namespace="http://servicos.saude.gov.br/schema/cadsus/v1r1/dadosprecadastro" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A934ef751-914a-435e-9bfb-3ba63a10aa93" id="foto" namespace="http://servicos.saude.gov.br/schema/corporativo/v1r1/fotografia" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Aae0decb5-2dd4-40df-a381-df6a8c71311f" id="tiposanguineo" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/tiposanguineo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A01fe2b9a-0233-44cc-a308-8b8d4ee7ef50" id="dadosnacionalidade" namespace="http://servicos.saude.gov.br/schema/corporativo/pessoafisica/v1r1/dadosnacionalidade" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A2db44f32-dcc3-4765-8f3a-d5b4257a7886" id="qualidade" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/grauqualidade" />
+  <xs:annotation>
+    <xs:documentation><![CDATA[Este esquema representa o registro do Usuário SUS - ator central do sistema do
+			Cartao Nacional de Saude - no Cadastro Nacional de Usuários do SUS.]]></xs:documentation>
+  </xs:annotation>
+  <xs:element name="UsuarioSUS" type="UsuarioSUSType" />
+  <xs:complexType name="UsuarioSUSType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Cartoes">
+        <xs:annotation>
+          <xs:documentation><![CDATA[CNSs do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CNS" type="cns:CNSType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="CPF" type="cpf:CPFType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[CPF do Usuário.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="NomeCompleto" type="nomecompleto:NomeCompletoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome completo do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="NomeSocial" type="nomesocial:NomeSocialType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome social do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="dataNascimento" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de nascimento do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Mae" type="nomecompleto:NomeCompletoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome da mae do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Pai" type="nomecompleto:NomeCompletoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Nome do pai do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataObito" type="xs:date">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Data de obito do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Sexo" type="sexo:SexoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Sexo do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="RacaCor" type="racacor:RacaCorType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Raca/Cor do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="EtniaIndigena" type="etnia:EtniaIndigenaType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Raca/Cor do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoSanguineo" type="tiposanguineo:TipoSanguineoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[TipoSanguineo do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="DadosNacionalidade" type="dadosnacionalidade:DadosNacionalidadeType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Dados relativos a nacionalidade do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="MunicipioNascimento" type="municipio:MunicipioType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Municipio de nascimento do Usuário SUS (usado apenas para Usuários nascidos no Brasil).]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Documentos" type="documentos:DocumentosType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Documentos do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Certidoes" type="certidoes:CertidoesType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Certidoes do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Enderecos">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Enderecos do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Endereco" type="endereco:EnderecoType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Telefones">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Telefones do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Telefone" type="telefone:TelefoneType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Emails" type="emails:EmailsType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Emails do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Fotografias">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Fotografias do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Fotografia" type="foto:FotografiaType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdentificadorLocal" type="identificadorlocal:IdentificadorLocalType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identificador local do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdentificadorCorporativo" type="identificadorcorporativo:IdentificadorCorporativoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identificador corporativo do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="GrauQualidade" type="qualidade:GrauQualidadeType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Representa Grau de qualidade de um cadastro de usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="originalRFB" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica que os dados basicos de identificacao vieram da Receita Federal pela busca do CPF]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="nomade" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica se o Usuário do SUS é nômade.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="DadosPreCadastro" type="precadastro:DadosPreCadastroType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Dados do pré-cadastro.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Situacao" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Situação: Ativo / Inativo.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="motivoAlteracaoSituacao">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Motivo da Alteração da Situação do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Vip" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica se o Usuário do SUS é VIP.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="motivoAlteracaoVip">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Motivo da Alteração de VIP do Usuário do SUS.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="protecaoTestemunha">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Flag de Protecao a Testemunha: Ativo / Inativo.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoProtecaoTestemunha">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descricao de Protecao a Testemunha.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="motivoNaoHigienizado">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Motivo para o registro não passar pelo serviço de Higienização.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="vivo" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Identifica se o Usuário está Vivo (Se vivo: true, se morto: false).]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

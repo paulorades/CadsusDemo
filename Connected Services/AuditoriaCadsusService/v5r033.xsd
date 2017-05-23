@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/operacao" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/operacao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Operacao" type="OperacaoType" />
+  <xs:complexType name="OperacaoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoOperacao" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código da operacao.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoOperacao">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição da operacao.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

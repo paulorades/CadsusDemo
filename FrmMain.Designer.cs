@@ -36,6 +36,8 @@
             this.verificarAtaualizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirNovoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.últimaDataDeAlteraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pesquisarToolStripMenuItem,
-            this.incluirToolStripMenuItem});
+            this.incluirToolStripMenuItem,
+            this.auditoriaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(864, 24);
@@ -104,6 +107,21 @@
             this.incluirNovoUsuarioToolStripMenuItem.Text = "Incluir novo usuário";
             this.incluirNovoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.incluirNovoUsuarioToolStripMenuItem_Click);
             // 
+            // auditoriaToolStripMenuItem
+            // 
+            this.auditoriaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.últimaDataDeAlteraçãoToolStripMenuItem});
+            this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.auditoriaToolStripMenuItem.Text = "Auditoria";
+            // 
+            // últimaDataDeAlteraçãoToolStripMenuItem
+            // 
+            this.últimaDataDeAlteraçãoToolStripMenuItem.Name = "últimaDataDeAlteraçãoToolStripMenuItem";
+            this.últimaDataDeAlteraçãoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.últimaDataDeAlteraçãoToolStripMenuItem.Text = "Última data de alteração";
+            this.últimaDataDeAlteraçãoToolStripMenuItem.Click += new System.EventHandler(this.últimaDataDeAlteraçãoToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,5 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem verificarAtaualizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirNovoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem auditoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem últimaDataDeAlteraçãoToolStripMenuItem;
     }
 }

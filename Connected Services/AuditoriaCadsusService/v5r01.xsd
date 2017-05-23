@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/usuariosusvinculado" xmlns:usuariosus="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/usuariosusvinculado" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A7432815d-35d7-423b-abc9-8224e57fd7f7" id="usuariosus" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" />
+  <xs:annotation>
+    <xs:documentation>Representa.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="UsuarioSUSVinculado" type="UsuarioSUSVinculadoType" />
+  <xs:complexType name="UsuarioSUSVinculadoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="identificadorTransacao" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+						Código Identificador da Transação.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" ref="usuariosus:UsuarioSUS" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

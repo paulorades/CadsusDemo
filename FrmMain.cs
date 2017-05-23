@@ -34,5 +34,10 @@ namespace CadsusDemo
         {
             new FrmIncluirUsuario().Show();
         }
+
+        private void últimaDataDeAlteraçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmAuditoriaCadsusPS().Show();
+        }
     }
 }

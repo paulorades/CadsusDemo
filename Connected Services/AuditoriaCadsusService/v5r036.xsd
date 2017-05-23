@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadohistoricoimpressao" xmlns:evento="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/evento" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadohistoricoimpressao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Af2dfa4e6-d226-4eb5-8277-4158106da730" id="evento" namespace="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/evento" />
+  <xs:annotation>
+    <xs:documentation>Representa o objeto de resposta de consolidado de histórico de impressão.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="ResultadoHistoricoImpressao" type="ResultadoHistoricoImpressao">
+    <xs:annotation>
+      <xs:documentation>Representa o objeto de filtro da pesquisa do usuario SUS.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ResultadoHistoricoImpressao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Evento" type="evento:EventoType">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Lista de eventos.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

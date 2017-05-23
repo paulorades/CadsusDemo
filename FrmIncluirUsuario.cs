@@ -32,15 +32,46 @@ namespace CadsusDemo
                     requestIncluir.CNESUsuario.CNES = ConfigurationManager.AppSettings["CNESUsuario.CNES"].ToString();
                     requestIncluir.CNESUsuario.Usuario = ConfigurationManager.AppSettings["CNESUsuario.Usuario"].ToString();
                     requestIncluir.CNESUsuario.Senha = ConfigurationManager.AppSettings["CNESUsuario.Senha"].ToString();
+                    requestIncluir.higienizar = false;
 
                     requestIncluir.UsuarioSUS = new CadsusService.UsuarioSUSType();
                     requestIncluir.UsuarioSUS.NomeCompleto = new CadsusService.NomeCompletoType() { Nome = "USUÁRIO TESTE INCLUSÃO" };
                     requestIncluir.UsuarioSUS.Mae = new CadsusService.NomeCompletoType() { Nome = "MÃE DO USUÁRIO TESTE INCLUSÃO" };
                     requestIncluir.UsuarioSUS.Pai = new CadsusService.NomeCompletoType() { Nome = "PAI DO USUÁRIO TESTE INCLUSÃO" };
-                    requestIncluir.UsuarioSUS.CPF = new CadsusService.CPFType() { numeroCPF = "65924947270" };
+                    //requestIncluir.UsuarioSUS.CPF = new CadsusService.CPFType() { numeroCPF = "65924947270" };
                     requestIncluir.UsuarioSUS.dataNascimento = new DateTime(2017, 01, 01);
+                    requestIncluir.UsuarioSUS.Enderecos = new CadsusService.UsuarioSUSTypeEnderecos()
+                    {
+                        Endereco = new CadsusService.EnderecoType()
+                        {
+                            CEP = new CadsusService.CEPType()
+                            {
+                                numeroCEP = "35170309"
+                            },
+
+                            Municipio = new CadsusService.MunicipioType()
+                            {
+                                nomeMunicipio = "CORONEL FABRICIANO",
+                                UF = new CadsusService.UFType()
+                                {
+                                    siglaUF = "MG",
+                                    nomeUF = "MINAS GERAIS"
+                                }                                
+                            }
+
+                        }
+                    };
+
+                    requestIncluir.UsuarioSUS.IdentificadorLocal = new CadsusService.IdentificadorLocalType()
+                    {
+                        identificadorSistema = "000001",
+                        numeroIdentificadorLocal = "000001"
+                    };
+
 
                     CadsusService.responseIncluir1 inclusao = await servico.incluirAsync(requestIncluir);
+
+                    //MessageBox.Show((inclusao?.responseIncluir != null).ToString());
                 }
             }
             catch (System.ServiceModel.FaultException<CadsusService.MSFalha> ex)

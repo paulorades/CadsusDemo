@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/schema/cadsus/evento/v1r1/funcionalidade" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/evento/v1r1/funcionalidade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Funcionalidade" type="FuncionalidadeType" />
+  <xs:complexType name="FuncionalidadeType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigoFuncionalidade" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Código da funcionalidade.]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descricaoFuncionalidade">
+        <xs:annotation>
+          <xs:documentation><![CDATA[Descrição da funcionalidade.]]></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -48,10 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AuditoriaCadsusService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\CadsusService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAuditoriaCadsusPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuditoriaCadsusPS.Designer.cs">
+      <DependentUpon>FrmAuditoriaCadsusPS.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultarUsuario.cs">
       <SubType>Form</SubType>
@@ -91,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAuditoriaCadsusPS.resx">
+      <DependentUpon>FrmAuditoriaCadsusPS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultarUsuario.resx">
       <DependentUpon>FrmConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +133,196 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\AuditoriaCadsusService\AuditoriaCadsusService.wsdl" />
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterCamposAlteradosPorTransacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterCamposAlteradosPorTransacao1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterHistoricoImpressao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterHistoricoImpressao1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterHistoricoTransacoesUsuarioSUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterHistoricoUnificacaoUsuarioSUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterUltimaDataAlteracaoUsuarioSUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.responseObterUltimaDataAlteracaoUsuarioSUS1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.TransacaoAuditoriaType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\CadsusDemo.AuditoriaCadsusService.UsuarioSUSVinculadoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r010.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r011.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r012.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r013.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r014.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r015.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r016.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r017.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r018.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r019.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r020.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r021.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r022.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r023.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r024.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r025.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r026.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r027.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r028.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r029.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r030.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r031.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r032.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r033.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r034.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r035.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r036.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r037.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r038.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r039.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r040.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r041.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r042.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r043.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r044.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r045.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r046.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r047.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r048.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r049.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r050.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r051.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r052.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r06.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r08.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuditoriaCadsusService\v5r09.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CadsusService\CadsusDemo.CadsusService.responseAlterarSituacao.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -320,6 +524,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AuditoriaCadsusService\" />
     <WCFMetadataStorage Include="Connected Services\CadsusService\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +535,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CadsusService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuditoriaCadsusService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuditoriaCadsusService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuditoriaCadsusService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

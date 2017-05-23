@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/transacaoauditoria" xmlns:tipotransacao="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/tipotransacao" xmlns:cnesusuario="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/transacaoauditoria" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A37ef7a97-b3f6-49dc-8c05-c5cc5d0e640d" id="cnesusuario" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A6a947b1d-972a-4451-9390-f7d27b25071f" id="tipotransacao" namespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/tipotransacao" />
+  <xs:annotation>
+    <xs:documentation>Representa a mensagem de retorno da transação da auditoria.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="TransacaoAuditoria" type="TransacaoAuditoriaType" />
+  <xs:complexType name="TransacaoAuditoriaType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="dataHoraTransacao" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>
+						Data e hora da Transação.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="identificadorTransacao" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+						Código Identificador da Transação.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+      <xs:element minOccurs="0" maxOccurs="1" ref="tipotransacao:TipoTransacao" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:cns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:operacao="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/operacao" xmlns:funcionalidade="http://servicos.saude.gov.br/schema/cadsus/evento/v1r1/funcionalidade" xmlns="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/evento" xmlns:cnesusuario="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/evento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A0c3929e7-e0fb-47de-9d0b-f04a33566f5e" namespace="http://servicos.saude.gov.br/schema/cadsus/evento/v1r1/funcionalidade" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A4491e050-0b2c-4424-97d6-d1d3c0c73af1" namespace="http://servicos.saude.gov.br/schema/cadsus/evento/v5r0/operacao" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A37ef7a97-b3f6-49dc-8c05-c5cc5d0e640d" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A844da212-7976-4dc0-9add-a5d04b574797" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" />
+  <xs:element name="Evento" type="EventoType" />
+  <xs:complexType name="EventoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CNESUsuario" type="cnesusuario:CNESUsuarioType">
+        <xs:annotation>
+          <xs:documentation>Dados do operador que deu origem ao evento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="identificadorEvento" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation>Codigo de identificacao. Nao deve ser informado ao registrar o evento.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Funcionalidade" type="funcionalidade:FuncionalidadeType">
+        <xs:annotation>
+          <xs:documentation>Funcionalidade do evento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Operacao" type="operacao:OperacaoType">
+        <xs:annotation>
+          <xs:documentation>Operacao do evento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="CNS" type="cns:CNSType">
+        <xs:annotation>
+          <xs:documentation>CNS do usuario do SUS vinculado.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dataEvento" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Data do evento.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

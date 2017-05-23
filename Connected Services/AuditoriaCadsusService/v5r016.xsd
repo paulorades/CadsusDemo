@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:identidade="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/identidade" xmlns:tituloeleitor="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" xmlns:ric="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" xmlns:cnh="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" xmlns:dnv="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/dnv" xmlns:ctps="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ctps" xmlns:nis="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" xmlns="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" xmlns:passaporte="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/passaporte" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r2/documentos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A8f5ae4ce-b811-4855-88da-730414942b2b" id="cnh" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/cnh" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Aa60f5e7a-5d4a-40bf-ac94-0b5905afeb44" id="ctps" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ctps" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Abc424f34-864c-4747-bb80-6163b1924b1b" id="identidade" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/identidade" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A8826d107-34bb-492f-b271-1787199a1596" id="nis" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/nis" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ae0f2234f-f6f7-4566-a7fa-732f786ca739" id="passaporte" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/passaporte" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A612c5fcf-da72-4e4f-800a-948911e76b27" id="ric" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/ric" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A36f24b1c-f1d0-468f-bec1-c361c87f26a4" id="tituloeleitor" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/tituloeleitor" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ac5ff42f4-1e8f-41f5-ab1b-6a03d93b2062" id="dnv" namespace="http://servicos.saude.gov.br/schema/corporativo/documento/v1r1/dnv" />
+  <xs:annotation>
+    <xs:documentation>Este esquema representa o conjunto de documentos de
+			uma pessoa fisica.
+		</xs:documentation>
+  </xs:annotation>
+  <xs:element name="Documentos" type="DocumentosType" />
+  <xs:complexType name="DocumentosType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Identidade" type="identidade:IdentidadeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CTPS" type="ctps:CTPSType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CNH" type="cnh:CNHType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TituloEleitor" type="tituloeleitor:TituloEleitorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NIS" type="nis:NISType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Passaporte" type="passaporte:PassaporteType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RIC" type="ric:RICType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DNV" type="dnv:DNVType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

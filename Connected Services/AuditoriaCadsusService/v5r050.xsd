@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msfalha="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" xmlns:resultadohistorico="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadohistoricoimpressao" xmlns:identificadorcorporativo="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" xmlns:usuariosusauditoria="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/usuariosusauditoria" xmlns:cnesusuario="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" xmlns:cns="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:transacaoauditoria="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/transacaoauditoria" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:usuariosusvinculado="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/usuariosusvinculado" xmlns:usuariosus="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://servicos.saude.gov.br/cadsus/v5r0/auditoriacadsusservice" elementFormDefault="qualified" targetNamespace="http://servicos.saude.gov.br/cadsus/v5r0/auditoriacadsusservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab408b421-17c5-444f-abeb-44a53dd257cd" id="identificadorcorporativo" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/identificadorcorporativo" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A37ef7a97-b3f6-49dc-8c05-c5cc5d0e640d" id="cnesusuario" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/cnesusuario" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A29eb8db7-8e1e-40dd-b77b-9927b3376291" id="usuariosusauditoria" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/usuariosusauditoria" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3Ab12be942-f7de-4aa4-a5af-379412519008" id="transacaoauditoria" namespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/transacaoauditoria" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A0f8014e4-edbd-44a9-a42c-9222ffe2ee24" id="resultadohistorico" namespace="http://servicos.saude.gov.br/wsdl/mensageria/v5r0/resultadohistoricoimpressao" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A392d89c3-47cb-4f55-8809-3ab43a9e3128" id="msfalha" namespace="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A844da212-7976-4dc0-9add-a5d04b574797" id="cns" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/cns" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A7432815d-35d7-423b-abc9-8224e57fd7f7" id="usuariosus" namespace="http://servicos.saude.gov.br/schema/cadsus/v5r0/usuariosus" />
+  <xs:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A678cf0a6-bcee-4f81-97bc-3293d3430602" id="usuariosusvinculado" namespace="http://servicos.saude.gov.br/wsdl/cadsus/auditoria/v5r0/usuariosusvinculado" />
+  <xs:element name="requestObterHistoricoUnificacaoUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="identificadorcorporativo:IdentificadorCorporativo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseObterHistoricoUnificacaoUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="usuariosusvinculado:UsuarioSUSVinculado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestObterUltimaDataAlteracaoUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseObterUltimaDataAlteracaoUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="dataHoraUltimaModificacao" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestObterCamposAlteradosPorTransacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" name="identificadorTransacao" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseObterCamposAlteradosPorTransacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="usuariosusauditoria:UsuarioSUSAuditoria" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestObterHistoricoTransacoesUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="identificadorcorporativo:IdentificadorCorporativo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseObterHistoricoTransacoesUsuarioSUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="transacaoauditoria:TransacaoAuditoria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requestObterHistoricoImpressao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="cnesusuario:CNESUsuario" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="cns:CNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responseObterHistoricoImpressao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="resultadohistorico:ResultadoHistoricoImpressao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

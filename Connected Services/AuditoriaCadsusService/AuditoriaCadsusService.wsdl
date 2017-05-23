@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://servicos.saude.gov.br/cadsus/v5r0/auditoriacadsusservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msfalha="http://servicos.saude.gov.br/wsdl/mensageria/falha/v5r0/msfalha" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" name="AuditoriaCadsusService" targetNamespace="http://servicos.saude.gov.br/cadsus/v5r0/auditoriacadsusservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0?WSDL&amp;type=XSD&amp;file=schema%3A64b41525-717c-4857-bdf0-a9e01ee9f4f0" namespace="http://servicos.saude.gov.br/cadsus/v5r0/auditoriacadsusservice" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestObterHistoricoUnificacaoUsuarioSUS">
+    <wsdl:part name="requestObterHistoricoUnificacaoUsuarioSUS" element="tns:requestObterHistoricoUnificacaoUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="responseObterHistoricoUnificacaoUsuarioSUS">
+    <wsdl:part name="responseObterHistoricoUnificacaoUsuarioSUS" element="tns:responseObterHistoricoUnificacaoUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="requestObterUltimaDataAlteracaoUsuarioSUS">
+    <wsdl:part name="requestObterUltimaDataAlteracaoUsuarioSUS" element="tns:requestObterUltimaDataAlteracaoUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="responseObterUltimaDataAlteracaoUsuarioSUS">
+    <wsdl:part name="responseObterUltimaDataAlteracaoUsuarioSUS" element="tns:responseObterUltimaDataAlteracaoUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="requestObterCamposAlteradosPorTransacao">
+    <wsdl:part name="requestObterCamposAlteradosPorTransacao" element="tns:requestObterCamposAlteradosPorTransacao" />
+  </wsdl:message>
+  <wsdl:message name="responseObterCamposAlteradosPorTransacao">
+    <wsdl:part name="responseObterCamposAlteradosPorTransacao" element="tns:responseObterCamposAlteradosPorTransacao" />
+  </wsdl:message>
+  <wsdl:message name="requestObterHistoricoTransacoesUsuarioSUS">
+    <wsdl:part name="requestObterHistoricoTransacoesUsuarioSUS" element="tns:requestObterHistoricoTransacoesUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="responseObterHistoricoTransacoesUsuarioSUS">
+    <wsdl:part name="responseObterHistoricoTransacoesUsuarioSUS" element="tns:responseObterHistoricoTransacoesUsuarioSUS" />
+  </wsdl:message>
+  <wsdl:message name="requestObterHistoricoImpressao">
+    <wsdl:part name="requestObterHistoricoImpressao" element="tns:requestObterHistoricoImpressao" />
+  </wsdl:message>
+  <wsdl:message name="responseObterHistoricoImpressao">
+    <wsdl:part name="responseObterHistoricoImpressao" element="tns:responseObterHistoricoImpressao" />
+  </wsdl:message>
+  <wsdl:message name="AuditoriaCadsusFault">
+    <wsdl:part name="fault" element="msfalha:MSFalha" />
+  </wsdl:message>
+  <wsdl:portType name="AuditoriaCadsusServicePortType">
+    <wsdl:operation name="obterHistoricoUnificacaoUsuarioSUS">
+      <wsdl:documentation>Apresentar o historico de unificacoes que o usuario ja sofreu. 
+			Retorna o numero da transacao e o usuario o qual foi vinculado.</wsdl:documentation>
+      <wsdl:input name="requestObterHistoricoUnificacaoUsuarioSUS" message="tns:requestObterHistoricoUnificacaoUsuarioSUS" />
+      <wsdl:output name="responseObterHistoricoUnificacaoUsuarioSUS" message="tns:responseObterHistoricoUnificacaoUsuarioSUS" />
+      <wsdl:fault name="AuditoriaCadsusFault" message="tns:AuditoriaCadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="obterUltimaDataAlteracaoUsuarioSUS">
+      <wsdl:documentation>Apresentar data da ultima alteração do registro
+				do usuário do SUS.</wsdl:documentation>
+      <wsdl:input name="requestObterUltimaDataAlteracaoUsuarioSUS" message="tns:requestObterUltimaDataAlteracaoUsuarioSUS" />
+      <wsdl:output name="responseObterUltimaDataAlteracaoUsuarioSUS" message="tns:responseObterUltimaDataAlteracaoUsuarioSUS" />
+      <wsdl:fault name="AuditoriaCadsusFault" message="tns:AuditoriaCadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="obterCamposAlteradosPorTransacao">
+      <wsdl:documentation>Apresentar data da ultima alteração do registro
+				do usuário do SUS.</wsdl:documentation>
+      <wsdl:input name="requestObterCamposAlteradosPorTransacao" message="tns:requestObterCamposAlteradosPorTransacao" />
+      <wsdl:output name="responseObterCamposAlteradosPorTransacao" message="tns:responseObterCamposAlteradosPorTransacao" />
+      <wsdl:fault name="AuditoriaCadsusFault" message="tns:AuditoriaCadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoTransacoesUsuarioSUS">
+      <wsdl:documentation>Apresentar o histórico de transações do registro.
+				São listadas todas as transações que já ocorreram com o registro
+				dentro da base desde a sua criação.
+			</wsdl:documentation>
+      <wsdl:input name="requestObterHistoricoTransacoesUsuarioSUS" message="tns:requestObterHistoricoTransacoesUsuarioSUS" />
+      <wsdl:output name="responseObterHistoricoTransacoesUsuarioSUS" message="tns:responseObterHistoricoTransacoesUsuarioSUS" />
+      <wsdl:fault name="AuditoriaCadsusFault" message="tns:AuditoriaCadsusFault" />
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoImpressao">
+      <wsdl:documentation>
+				Obter histórico de impressões de um determinado usuário.
+			</wsdl:documentation>
+      <wsdl:input name="requestObterHistoricoImpressao" message="tns:requestObterHistoricoImpressao" />
+      <wsdl:output name="responseObterHistoricoImpressao" message="tns:responseObterHistoricoImpressao" />
+      <wsdl:fault name="AuditoriaCadsusFault" message="tns:AuditoriaCadsusFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuditoriaCadsusServiceSOAP12Binding" type="tns:AuditoriaCadsusServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterHistoricoUnificacaoUsuarioSUS">
+      <wsdl:documentation>Apresentar o historico de unificacoes que o usuario ja sofreu. 
+			Retorna o numero da transacao e o usuario o qual foi vinculado.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoUnificacaoUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoUnificacaoUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap12:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterUltimaDataAlteracaoUsuarioSUS">
+      <wsdl:documentation>Apresentar data da ultima alteração do registro
+				do usuário do SUS.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input name="requestObterUltimaDataAlteracaoUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterUltimaDataAlteracaoUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap12:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterCamposAlteradosPorTransacao">
+      <wsdl:documentation>Apresentar o histórico de alteração do registro,
+				mostrando os valores atuais dos campos alterados e seus valores
+				antigos.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input name="requestObterCamposAlteradosPorTransacao">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterCamposAlteradosPorTransacao">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap12:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoTransacoesUsuarioSUS">
+      <wsdl:documentation>Apresentar o histórico de transações do registro.
+				São listadas todas as transações que já ocorreram com o registro
+				dentro da base desde a sua criação.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoTransacoesUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoTransacoesUsuarioSUS">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap12:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoImpressao">
+      <wsdl:documentation>Apresentar todas as impressões já realizadas pelo
+				usuário.
+			</wsdl:documentation>
+      <soap12:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoImpressao">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoImpressao">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap12:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuditoriaCadsusServiceSOAP11Binding" type="tns:AuditoriaCadsusServicePortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterHistoricoUnificacaoUsuarioSUS">
+      <wsdl:documentation>Apresentar o historico de unificacoes que o usuario ja sofreu. 
+			Retorna o numero da transacao e o usuario o qual foi vinculado.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoUnificacaoUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoUnificacaoUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap11:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterUltimaDataAlteracaoUsuarioSUS">
+      <wsdl:documentation>Apresentar data da ultima alteração do registro
+				do usuário do SUS.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input name="requestObterUltimaDataAlteracaoUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterUltimaDataAlteracaoUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap11:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterCamposAlteradosPorTransacao">
+      <wsdl:documentation>Apresentar o histórico de alteração do registro,
+				mostrando os valores atuais dos campos alterados e seus valores
+				antigos.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input name="requestObterCamposAlteradosPorTransacao">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterCamposAlteradosPorTransacao">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap11:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoTransacoesUsuarioSUS">
+      <wsdl:documentation>Apresentar o histórico de transações do registro.
+				São listadas todas as transações que já ocorreram com o registro
+				dentro da base desde a sua criação.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoTransacoesUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoTransacoesUsuarioSUS">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap11:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obterHistoricoImpressao">
+      <wsdl:documentation>Apresentar todas as impressões já realizadas pelo
+				usuário.
+			</wsdl:documentation>
+      <soap11:operation soapAction="" />
+      <wsdl:input name="requestObterHistoricoImpressao">
+        <soap11:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="responseObterHistoricoImpressao">
+        <soap11:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaCadsusFault">
+        <soap11:fault use="literal" name="AuditoriaCadsusFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuditoriaCadsusService">
+    <wsdl:port name="AuditoriaCadsusServicePort" binding="tns:AuditoriaCadsusServiceSOAP12Binding">
+      <soap12:address location="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0" />
+    </wsdl:port>
+    <wsdl:port name="AuditoriaCadsusServiceSOAP11Port" binding="tns:AuditoriaCadsusServiceSOAP11Binding">
+      <soap11:address location="https://servicoshm.saude.gov.br/cadsus/AuditoriaCadsusService/v5r0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
