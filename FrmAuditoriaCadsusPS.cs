@@ -42,9 +42,33 @@ namespace CadsusDemo
 
                     AuditoriaCadsusService.responseObterUltimaDataAlteracaoUsuarioSUS1 x =
                         await servico.obterUltimaDataAlteracaoUsuarioSUSAsync(requestPesquisa);
+
                     if (x != null)
                         lblDataUltimaAtualizacao.Text =
                             x.responseObterUltimaDataAlteracaoUsuarioSUS.dataHoraUltimaModificacao.ToString();
+
+                    var requestHistoricoImpressao = new AuditoriaCadsusService.requestObterHistoricoImpressao();
+                    requestHistoricoImpressao.CNESUsuario = new AuditoriaCadsusService.CNESUsuarioType();
+                    requestHistoricoImpressao.CNESUsuario.CNES = ConfigurationManager.AppSettings["CNESUsuario.CNES"].ToString();
+                    requestHistoricoImpressao.CNESUsuario.Usuario = ConfigurationManager.AppSettings["CNESUsuario.Usuario"].ToString();
+                    requestHistoricoImpressao.CNESUsuario.Senha = ConfigurationManager.AppSettings["CNESUsuario.Senha"].ToString();
+
+                    requestHistoricoImpressao.CNS = new AuditoriaCadsusService.CNSType();
+                    requestHistoricoImpressao.CNS.numeroCNS = txtCNS.Text;
+                    requestHistoricoImpressao.CNS.tipoCartao = new AuditoriaCadsusService.TipoCNSType();                    
+
+                    AuditoriaCadsusService.responseObterHistoricoImpressao1 p = await servico.obterHistoricoImpressaoAsync(requestHistoricoImpressao);
+                    if (p != null)
+                    {
+                        for (int i = 0; i < p.responseObterHistoricoImpressao.ResultadoHistoricoImpressao.Length; i++)
+                        {
+                            lblDataUltimaAtualizacao.Text +=
+                            $"{p.responseObterHistoricoImpressao.ResultadoHistoricoImpressao[i].dataEvento.ToLongDateString()} -" +
+                            $"{p.responseObterHistoricoImpressao.ResultadoHistoricoImpressao[i].Funcionalidade.descricaoFuncionalidade} -" +
+                            $"{p.responseObterHistoricoImpressao.ResultadoHistoricoImpressao[i].Operacao.descricaoOperacao}" +
+                            $"\n";
+                        }
+                    }
                 }
             }
             catch (System.ServiceModel.FaultException<CadsusService.MSFalha> ex)

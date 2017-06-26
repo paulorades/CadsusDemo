@@ -39,5 +39,10 @@ namespace CadsusDemo
         {
             new FrmAuditoriaCadsusPS().Show();
         }
+
+        private void usuariosSemCNSSanitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmUsuariosCNSSanitas().Show();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.incluirNovoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.últimaDataDeAlteraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosSemCNSSanitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.porNomeDaMaeToolStripMenuItem,
             this.pesquisarPorCPFtoolStripMenuItem,
             this.pesquisarPorNomeCompletoToolStripMenuItem,
-            this.verificarAtaualizaçãoToolStripMenuItem});
+            this.verificarAtaualizaçãoToolStripMenuItem,
+            this.usuariosSemCNSSanitasToolStripMenuItem});
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
@@ -122,6 +124,13 @@
             this.últimaDataDeAlteraçãoToolStripMenuItem.Text = "Última data de alteração";
             this.últimaDataDeAlteraçãoToolStripMenuItem.Click += new System.EventHandler(this.últimaDataDeAlteraçãoToolStripMenuItem_Click);
             // 
+            // usuariosSemCNSSanitasToolStripMenuItem
+            // 
+            this.usuariosSemCNSSanitasToolStripMenuItem.Name = "usuariosSemCNSSanitasToolStripMenuItem";
+            this.usuariosSemCNSSanitasToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.usuariosSemCNSSanitasToolStripMenuItem.Text = "Usuarios sem CNS (Sanitas)";
+            this.usuariosSemCNSSanitasToolStripMenuItem.Click += new System.EventHandler(this.usuariosSemCNSSanitasToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,5 +159,6 @@
         private System.Windows.Forms.ToolStripMenuItem incluirNovoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auditoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem últimaDataDeAlteraçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosSemCNSSanitasToolStripMenuItem;
     }
 }
